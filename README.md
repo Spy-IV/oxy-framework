@@ -5,6 +5,6 @@ If you need assistance or have any recommendations, please get in touch with us 
 
 # Docs
 
-a tutorial and wiki are available on our [website](https://oxygen8.godaddysites.com)
+A tutorial and wiki are available on our [website](https://oxygen8.godaddysites.com) .
 
-contact us through our [discord](https://discord.gg/YmrC26a9nv)
+Contact us through our [discord](https://discord.gg/YmrC26a9nv) .
