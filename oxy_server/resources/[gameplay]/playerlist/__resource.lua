@@ -1,1 +1,0 @@
-client_script 'playerlist.lua'
