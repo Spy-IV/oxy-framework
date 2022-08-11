@@ -1,4 +1,6 @@
 # CitizenIV-VoiceChat
+### This is a voicechat script taken from
+[vc](https://github.com/LIBCITY-RP/CitizenIV-VoiceChat)
 
 # Functions
 SetPlayerVolume (playerID, Volume)
