@@ -664,59 +664,6 @@ ActivateMenu = function(title, items)
 		end
 	end
 end
-numboard = 0
-local number = ""
-ActivateNumboard = function()
-	numboard = 1
-	Citizen.CreateThread(function()
-		while true do
-			Citizen.Wait(0)
-			if(numboard == 1) then
-				DrawRect(0.5, 0.5, 0.3, 0.05, 90, 90, 90, 255)
-				DrawRect(0.5, 0.5, 0.28, 0.03, 3, 138, 255)
-				
-				if(number ~= "") then
-					SetTextScale(0.200000,  0.5000000)
-					SetTextDropshadow(0, 0, 0, 0, 0)
-					SetTextFont(6)
-					SetTextEdge(1, 0, 0, 0, 255)
-					SetTextCentre(1)
-					DisplayTextWithLiteralString(0.5, 0.485, "STRING", "" .. number)
-				else
-					SetTextScale(0.200000,  0.5000000)
-					SetTextDropshadow(0, 0, 0, 0, 0)
-					SetTextFont(6)
-					SetTextEdge(1, 0, 0, 0, 255)
-					SetTextCentre(1)
-					DisplayTextWithLiteralString(0.5, 0.485, "STRING", "0")
-				end
-				
-				for i=1,10,1 do --numbers
-					if(IsGameKeyboardKeyJustPressed(i+1)) then
-						if(i ~= 10) then
-							number = "" .. number .. "" .. i
-						else
-							number = "" .. number .. "0"
-						end
-					end
-				end
-				if(IsGameKeyboardKeyJustPressed(14)) then --backspace
-					number = number:sub(1, #number - 1)
-				end
-				if(IsGameKeyboardKeyJustPressed(28)) then --enter
-					if(number ~= "") then
-                        numboard = 0
-						return number
-					end
-				end
-			end
-		end
-	end)
-end
-
-GetNumBoardResult = function()
-	return number
-end
 
 cursor = 0
 local mouseX = 0
