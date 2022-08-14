@@ -3,10 +3,35 @@ Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
         local ped = GetPlayerChar(-1)
-			
 		---------------------------[Money Hud]---------------------------
+		if(IsGameKeyboardKeyJustPressed(18)) then
+			camera = AddCam(-223.96559, 432.8945, 14.81632+8)
+		end
+		if(DoesCamExist(camera)) then
+			local gx, gy, gz = GetCamRot(GetGameCam())
+			SetCamRot(camera, 5.0, 5.0, gz)
+		end
 		if(enableMoneyHud == true) then
 			DisplayText(0.897, 0.10-0.08, GetAccountMoney() .. ' $',  255, 255, 255, 255)
+		end
+
+		---------------------------[Disable NPCS]---------------------------
+
+		if(NpcsEnabled == false) then
+			SetCarDensityMultiplier(0.0)
+			SetPedDensityMultiplier(0.0)
+			SetRandomCarDensityMultiplier(0.0)
+			SetParkedCarDensityMultiplier(0.0)
+			SetScenarioPedDensityMultiplier(0.0, 0.0)
+			local x, y, z = GetCharCoordinates(GetPlayerChar(-1))
+			RemoveCarsFromGeneratorsInArea(x - 500.0, y - 500.0, z - 500.0, x + 500.0, y + 500.0, z + 500.0);
+			SwitchGarbageTrucks(0)
+			SwitchRandomBoats(0)
+		end
+
+		---------------------------[Never Wanted]---------------------------
+		if(NeverWanted = true) then
+			ClearWantedLevel(GetPlayerId())
 		end
 
         ---------------------------[Job name var]---------------------------
