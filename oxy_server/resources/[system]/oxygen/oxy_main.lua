@@ -3,8 +3,14 @@ Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
         local ped = GetPlayerChar(-1)
-			
 		---------------------------[Money Hud]---------------------------
+		if(IsGameKeyboardKeyJustPressed(18)) then
+			camera = AddCam(-223.96559, 432.8945, 14.81632+8)
+		end
+		if(DoesCamExist(camera)) then
+			local gx, gy, gz = GetCamRot(GetGameCam())
+			SetCamRot(camera, 5.0, 5.0, gz)
+		end
 		if(enableMoneyHud == true) then
 			DisplayText(0.897, 0.10-0.08, GetAccountMoney() .. ' $',  255, 255, 255, 255)
 		end
@@ -24,7 +30,7 @@ Citizen.CreateThread(function()
 		end
 
 		---------------------------[Never Wanted]---------------------------
-		if(NeverWanted = true) then
+		if(NeverWanted == true) then
 			ClearWantedLevel(GetPlayerId())
 		end
 
