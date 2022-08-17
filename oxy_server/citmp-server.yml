@@ -15,6 +15,7 @@ AutoStartResources:
     - oxy_voicechat
     - voicechat
     - oxy_admin
+    - oxy_shops
 
 RconPassword: oxy
 
