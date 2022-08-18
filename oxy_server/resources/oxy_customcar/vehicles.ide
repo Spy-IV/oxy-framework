@@ -1,0 +1,5 @@
+cars
+ford,        ford,        car,        FORD,        TURISMO,        VEH@LOW,	VEH@LOW_CONV,        100,        999,		0.2660,      0.2660,   0,   5,	  1.0,      0,	   sports+ext_conv+ext_strong
+benz,        benz,        car,        BENZ,        INFERNUS,       VEH@LOW, VEH@LOW_LE2_RI2,     20,         999,       0.2391,      0.2391,   0,   5,    1.0,      1,     ext_strong + livery
+lexus,	     lexus,	      car,		  LEXUS,	   HUNT,           VEH@LOW,	VEH@LOW_LE1_RI1,	 100,        999,		0.2826,	     0.2826,   0,	5,	  1.5,      0,     ext_requi+livery
+end
