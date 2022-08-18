@@ -16,6 +16,7 @@ AutoStartResources:
     - voicechat
     - oxy_admin
     - oxy_shops
+    - oxy_customcar
 
 RconPassword: oxy
 
