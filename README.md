@@ -1,5 +1,5 @@
-# oxy-framework
-A framework for CitizenIV:MP called Oxy helps developers by providing basic server features.
+# oxygen-framework
+A framework for CitizenIV:MP called OXY (oxygen) helps developers by providing basic server features.
 
 If you need assistance or have any recommendations, please get in touch with us via Discord.
 
