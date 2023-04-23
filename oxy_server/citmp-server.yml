@@ -17,6 +17,8 @@ AutoStartResources:
     - oxy_admin
     - oxy_shops
     - oxy_customcar
+    - fix
+    - cleanup
 
 RconPassword: oxy
 
